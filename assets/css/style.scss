@@ -40,9 +40,157 @@ img {
     width: 100%;
 }
 
+.header {
+    &__container {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        z-index: 100;
+        background: #FFFFFF;
+    }
+    &__wrapper {
+        display: flex;
+    }
+    &__logo {
+        width: 124px;
+        height: 48px;
+    }
+    &__nav {
+        width: 544px;
+        height: 41px;
+        display: flex;
+        justify-content: space-between;
+        &_en {
+            font-size: 13px;
+        }
+        &_ja {
+            font-size: 16px;
+        }
+        li {
+            text-align: center;
+        }
+    }
+    &__contact {
+        display: flex;
+        &_tell {
+            width: 204px;
+            height: 44px;
+            &_number {
+                font-size: 24px;
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            &_time {
+                span {
+                font-size: 16px;
+                }
+            }
+        }
+        &_email {
+            width: 128px;
+            height: 80px;
+            background: #20868A;
+            color: #FFFFFF;
+            text-align: center;
+            img {
+                width: 30px;
+            }
+        }
+    }
+}
+
 .eyecatch {
     &__container {
+        position: relative;
         background: url(../images/fv-img01.png)no-repeat center center / cover;
         height: 755px;
+        width: 100%;
+    }
+    &__title {
+        position: absolute;
+        background: #FFFFFF;
+        color: #192F60;
+        font-size: 60px;
+        font-weight: 700px;
+    }
+}
+
+.concept {
+    &__upper {
+        &_bg-title {
+            width: 343.8px;
+
+        }
+    }
+    &__lower {
+        &_features1 {
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &_features2 {
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &_features3 {
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+.service {
+    &__upper {
+        &_bg-title {
+            width: 335px;
+        }
+    }
+    &__item {
+        img {
+            width: 308px;
+            height: 205px;
+        }
+    }
+}
+
+.work {
+    &__bg-title {
+        img {
+            width: 343.8px;
+        }
+    }
+    &__item {
+        img {
+            width: 618px;
+            height: 412px;
+        }
+    }
+}
+
+.blog {
+    &__bg-title {
+        img {
+            width: 335px;
+        }
+    }
+}
+
+.footer {
+    &__lower {
+        &_logo {
+            width: 124px;
+            height: 48px;
+        }
     }
 }
