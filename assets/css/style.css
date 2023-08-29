@@ -225,6 +225,78 @@ a {
   color: #2D2D2D;
 }
 
+/*スクロールダウン全体の場所*/
+.scrolldown1 {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  right: 32px;
+  bottom: 62px;
+  /*全体の高さ*/
+  height: 50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span {
+  /*描画位置*/
+  writing-mode: vertical-rl;
+  position: absolute;
+  left: -8px;
+  top: -60px;
+  /*テキストの形状*/
+  color: #eee;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+}
+
+/* 線の描写 */
+.scrolldown1::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #eee;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  -webkit-animation: pathmove 1.4s ease-in-out infinite;
+          animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@-webkit-keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 50px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 70px;
+    opacity: 0;
+  }
+}
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 50px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 70px;
+    opacity: 0;
+  }
+}
 .concept {
   margin-top: 93px;
   width: 100%;
@@ -291,7 +363,7 @@ a {
 }
 .concept__lower {
   margin: 80px auto 0;
-  width: 1366px;
+  width: 100%;
   height: 522px;
   background: url(../images/bg.png) no-repeat center center/cover;
 }
@@ -448,10 +520,33 @@ a {
 }
 
 .work {
+  position: relative;
   width: 100%;
+  height: 964px;
+  margin-top: 180px;
+}
+.work__btn {
+  text-align: center;
+}
+.work__bg-title {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .work__bg-title img {
   width: 343.8px;
+}
+.work__wrapper {
+  position: relative;
+  width: 1140px;
+  height: 525px;
+  margin: 0 auto;
+}
+.work__wrapper_text {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 950px;
 }
 .work__wrapper h3 {
   font-size: 28px;
@@ -462,19 +557,70 @@ a {
   line-height: 2.4;
   text-align: center;
   letter-spacing: 2px;
+  margin: 0 0 0 auto;
 }
 .work__wrapper p {
   font-size: 14px;
   font-weight: 500;
+  margin-top: 40px;
 }
 .work__item img {
   width: 618px;
   height: 412px;
 }
+.work__slider {
+  position: absolute;
+  top: 246px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1630px;
+}
+.work__slider_item {
+  margin: 0 auto;
+  width: 528px;
+  height: 600px;
+}
+.work__slider_item p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  margin-top: 32px;
+}
+.work__slider_item a {
+  color: #192F60;
+}
+.work__slider_title {
+  font-size: 20px;
+  color: #192F60;
+  font-weight: 700;
+}
+.work__slider_btn {
+  margin-top: 40px;
+  display: inline-block;
+  width: 240px;
+  height: 40px;
+  border: 1px solid #192F60;
+  text-align: center;
+  padding: 8px 0;
+}
+.work__others-btn {
+  position: absolute;
+  bottom: 0;
+  background: #AEB6C7;
+  width: 240px;
+  height: 40px;
+  left: 50%;
+  padding: 8px 0;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.work__others-btn a {
+  color: #FFFFFF;
+}
 
 .blog {
   position: relative;
-  max-width: 1366px;
+  width: 100%;
   height: 515px;
   margin: 0 auto;
   background: url(../images/blog_bg.png) no-repeat center center/cover;
@@ -593,5 +739,74 @@ a {
   font-weight: 300;
   text-align: center;
   margin-top: 30px;
+}
+
+.slider {
+  width: 1630px;
+  height: 636px;
+  margin: 0 auto;
+}
+
+.slider img {
+  width: 618px;
+  height: 412px;
+  height: auto;
+}
+
+.slider .slick-slide {
+  transform: scale(0.8);
+  transition: all 0.5s;
+}
+
+.slick-slide .work__slider_item {
+  transform: scale(0.8);
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.slick-center .work__slider_item {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.slider .slick-slide.slick-center {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #666;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+
+.slick-prev {
+  position: absolute;
+  right: 254px;
+  left: auto;
+}
+
+.slick-next::before {
+  content: url(/assets/images/Icon\ ionic-ios-arrow-round-forward.svg);
+  position: absolute;
+  top: 20px;
+  left: 21px;
+}
+
+.slick-prev::before {
+  content: url(/assets/images/Icon\ ionic-ios-arrow-round-forward左.svg);
+  position: absolute;
+  top: 20px;
+  left: 21px;
+}
+
+.slick-next {
+  right: 120px;
 }
 /*# sourceMappingURL=style.css.map */
