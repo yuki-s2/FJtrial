@@ -90,9 +90,15 @@ a {
     }
 
     &__logo {
-        width: 124px;
-        height: 48px;
-        margin-left: 53px;
+        @include mq(md) {
+            width: 124px;
+            height: 48px;
+            margin-left: 53px;
+        }
+        @include mq(sm) {
+            width: 100px;
+            margin-left: 10px;
+        }
     }
 
     &__nav {
@@ -176,14 +182,15 @@ a {
 }
 
 .drawer--right .drawer-hamburger {
-    right: 40px;
-    top: 20px;
+    right: 10px;
+    top: 5px;
     z-index: 100;
-
-    @include mq(sm) {
-        right: 17px;
-        top: 13px;
-    }
+}
+.drawer-open .drawer-hamburger-icon:before {
+    background: #fff;
+}
+.drawer-open .drawer-hamburger-icon:after  {
+    background: #fff;
 }
 
 .drawer--right.drawer-open .drawer-hamburger {
@@ -203,7 +210,7 @@ a {
 }
 
 .drawer-nav {
-    background: #464545;
+    background: #192F60;
     z-index: 99;
 
     @include mq(md) {
@@ -226,8 +233,8 @@ a {
 
 .drawer-menu-item {
     border-bottom: 0.5px solid #d8d8d9;
-    font-size: 19px;
-    padding: 10px 0;
+    font-size: 12px;
+    padding: 20px 0 ;
     color: #d8d8d9;
 }
 
@@ -236,9 +243,14 @@ a {
 .eyecatch {
     &__container {
         position: relative;
-        background: url(../images/fv-img01.png)no-repeat right;
+        background: url(../images/fv-img01.png)no-repeat center center / cover;
         height: 755px;
         width: 100%;
+        @include mq(sm) {
+            height: 655px;
+            background: url(../images/fv-img01.png)no-repeat right;
+
+        }
     }
 
     &__title-wrap {
@@ -252,6 +264,7 @@ a {
             width: 300px;
             left: 20px;
             text-align: center;
+            top: 160px;
         }
 
 
@@ -265,18 +278,16 @@ a {
             text-align: center;
             // letter-spacing: 12px;
             line-height: 1.45;
-            padding: 0 0 0 13px;
 
             @include mq(md) {
                 width: 913px;
                 letter-spacing: 15px;
-
-
+                padding: 0 0 0 13px;
             }
 
             @include mq(sm) {
-                font-size: 20px;
-
+                font-size: 23px;
+                line-height: 2.5;
             }
         }
 
@@ -295,7 +306,10 @@ a {
             }
 
             @include mq(sm) {
-                font-size: 20px;
+                font-size: 23px;
+                width: 337px;
+                line-height: 2.5;
+                margin-top: 15px;
 
             }
 
@@ -310,11 +324,12 @@ a {
             line-height: 2.3;
             text-align: center;
             letter-spacing: 2.2px;
+            width: 347px;
 
             @include mq(sm) {
                 font-size: 14px;
                 width: 260px;
-                margin-top: 10px;
+                margin-top: 25px;
                 line-height: 1.5;
             }
         }
@@ -327,18 +342,29 @@ a {
         @include mq(md) {
             display: flex;
         }
+        @include mq(sm) {
+            width: 100%;
+        }
 
 
         &_tell {
             width: 240px;
             height: 56px;
             background: #192F60;
+            @include mq(sm) {
+                margin: 0 auto;
+                padding: 0;
+            }
 
             &_number {
                 font-size: 24px;
                 text-align: center;
                 line-height: 1.2;
                 margin-top: 7px;
+                @include mq(sm) {
+                    font-size: 22px;
+                    padding: 3px 0;
+                }
 
                 img {
                     width: 16px;
@@ -370,6 +396,9 @@ a {
                 @include mq(md) {
                     margin-left: 80px;
                 }
+                @include mq(sm) {
+                    margin-top: 15px;
+                }
             }
 
             a:after {
@@ -382,7 +411,6 @@ a {
     &__news {
         position: absolute;
         bottom: -54px;
-        right: 0;
 
         align-items: center;
         background: #FFFFFF;
@@ -392,10 +420,15 @@ a {
             width: 1253px;
             height: 80px;
             display: flex;
+            right: 0;
         }
 
         @include mq(sm) {
             height: 100px;
+            width: 80%;
+            left: 50%;
+            transform: translateX( -50% );
+            padding: 14px 0;
         }
 
         &_title {
@@ -426,16 +459,25 @@ a {
 
             @include mq(sm) {
                 font-size: 10px;
+                width: 80%;
+                margin: 0 auto;
             }
         }
 
         &_date {
             margin-right: 32px;
+            @include mq(sm) {
+                margin: 0 0 0 auto;
+                text-align: right;
+            }
         }
 
         &_text {
             color: #2D2D2D;
             font-size: 16px;
+            @include mq(sm) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -514,17 +556,24 @@ a {
             width: 1138.8px;
         }
 
+        @include mq(sm) {
+            height: 630px;
+        }
+
         &_wrapper {
             z-index: -10;
             position: absolute;
             top: 120px;
             right: 0;
+            
 
             @include mq(md) {
                 width: 950px;
             }
+
             @include mq(sm) {
                 top: 20px;
+                width: 100%;
             }
 
             &_main {
@@ -546,6 +595,8 @@ a {
 
                 @include mq(sm) {
                     font-size: 10px;
+                    width: 80%;
+                    margin: 65px auto;
                 }
 
             }
@@ -555,7 +606,7 @@ a {
             width: 343.8px;
 
             @include mq(sm) {
-                width: 100px;
+                width: 150px;
             }
         }
 
@@ -569,8 +620,8 @@ a {
         &_right {
             @include mq(sm) {
                 position: absolute;
-                top: 30%;
-                left: 20px;
+                top: 60%;
+                right: 15px;
             }
 
             h3 {
@@ -581,17 +632,23 @@ a {
                 font-weight: 700;
                 line-height: 2;
                 letter-spacing: 2.9px;
+                @include mq(md) {
+                    
+                }
 
                 @include mq(sm) {
-                    font-size: 14px;
+                    font-size: 15px;
                     width: 300px;
+                    line-height: 3;
                 }
             }
 
             &_title-upper {
                 margin-top: 40px;
-
                 width: 460px;
+                @include mq(sm) {
+                    margin: 0;
+                }
             }
 
             &_title {
@@ -614,7 +671,7 @@ a {
                     font-size: 54px;
 
                     @include mq(sm) {
-                        font-size: 30px;
+                        font-size: 25px;
                     }
 
                 }
@@ -645,8 +702,8 @@ a {
 
     @include mq(sm) {
         margin: 0 auto;
-    //     background: url(../images/合体\ 2.png)no-repeat right;
     }
+
     &-wrapper {
         margin: 0 auto;
 
@@ -659,14 +716,22 @@ a {
 
     &_left {
         width: 372px;
+        @include mq(sm) {
+            width: 80%;
+            margin: 0 auto;
+        }
 
         &_subTitle {
             font-size: 20px;
             font-weight: 700;
             color: #192F60;
             letter-spacing: 2px;
+
             @include mq(md) {
                 margin: 76px 0 0 8px;
+            }
+            @include mq(sm) {
+                text-align: center;
             }
         }
 
@@ -691,6 +756,7 @@ a {
             @include mq(sm) {
                 width: 300px;
                 font-size: 10px;
+                margin-top: 20px;
             }
         }
     }
@@ -700,21 +766,45 @@ a {
             width: 757px;
         }
 
+        @include mq(sm) {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        &_spText {
+            @include mq(sm) {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
         &_text {
-            margin-left: 30px;
-            width: 447px;
+            @include mq(md) {
+                margin-left: 30px;
+                width: 447px;
+            }
 
             h4 {
                 font-size: 24px;
                 font-weight: 700;
                 color: #192F60;
                 letter-spacing: 4px;
+                @include mq(sm) {
+                    margin-top: 20px;
+                    padding-right: 20px;
+                    font-size: 20px;
+                }
             }
 
             p {
                 margin-top: 2px;
                 font-size: 14px;
                 font-weight: 500;
+
+                @include mq(sm) {
+                    width: 300px;
+                    margin-top: 10px;
+                }
             }
         }
 
@@ -730,32 +820,52 @@ a {
             img {
                 width: 100px;
                 height: 100px;
+                @include mq(sm) {
+                    width: 60px;
+                    height: 60px;
+                }
             }
         }
 
         &_features2 {
-            margin: 58px 91px 0 0;
+
             @include mq(md) {
                 display: flex;
                 justify-content: flex-end;
+                margin: 58px 91px 0 0;
+
+            }
+            @include mq(sm) {
+                margin-top: 40px;
             }
 
             img {
                 width: 100px;
                 height: 100px;
+                @include mq(sm) {
+                    width: 60px;
+                    height: 60px;
+                }
             }
         }
 
         &_features3 {
-            margin: 58px 181px 0 0;
             @include mq(md) {
                 display: flex;
                 justify-content: flex-end;
+                margin: 58px 181px 0 0;
+            }
+            @include mq(sm) {
+                margin-top: 40px;
             }
 
             img {
                 width: 100px;
                 height: 100px;
+                @include mq(sm) {
+                    width: 60px;
+                    height: 60px;
+                }
             }
         }
     }
@@ -763,12 +873,25 @@ a {
 }
 
 .service {
+    @include mq(sm) {
+        margin-top: 40px;
+        width: 100%;
+    }
+
     &__container {
         position: relative;
-        width: 1140px;
         height: 703px;
         margin: 0 auto;
         padding-top: 80px;
+
+        @include mq(md) {
+            width: 1140px;
+            height: 880px;
+        }
+        @include mq(sm) {
+            // width: 80%;
+            margin: 0 auto
+        }
 
         h3 {
             font-size: 28px;
@@ -780,6 +903,12 @@ a {
             letter-spacing: 3px;
             text-align: center;
             margin-top: 78px;
+
+            @include mq(sm) {
+                font-size: 18px;
+                width: 300px;
+                margin: 40px auto 0;
+            }
         }
 
         p {
@@ -787,6 +916,12 @@ a {
             font-weight: 500;
             width: 950px;
             margin-top: 39px;
+
+            @include mq(sm) {
+                font-size: 13px;
+                width: 300px;
+                margin: 20px auto 0;
+            }
         }
     }
 
@@ -795,12 +930,23 @@ a {
         position: absolute;
         z-index: -10;
         right: 0;
+        @include mq(sm) {
+            width: 200px;
+        }
     }
 
     &__wrapper {
-        display: flex;
         width: 950px;
-        margin: 40px auto 0;
+
+        @include mq(md) {
+            display: flex;
+            margin: 40px auto 0;
+        }
+
+        @include mq(sm) {
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 
     &__item {
@@ -808,8 +954,17 @@ a {
         position: relative;
         width: 308px;
 
+        @include mq(sm) {
+            width: 100%;
+            // margin-top: 50px;
+            margin: 50px auto;
+        }
+
         &:not(:first-child) {
-            margin-left: 13px;
+            @include mq(md) {
+                margin-left: 13px;
+
+            }
         }
 
         &_title {
@@ -821,6 +976,9 @@ a {
             top: 156px;
             left: 16px;
             padding: 4px 20px;
+            @include mq(sm) {
+                font-size: 17px;
+            }
 
             &_sub {
                 position: absolute;
@@ -834,6 +992,9 @@ a {
         img {
             width: 308px;
             height: 205px;
+            @include mq(sm) {
+                width: 300px;
+            }
         }
 
         p {
@@ -842,11 +1003,17 @@ a {
             font-weight: 500;
             line-height: 1.7;
             margin: 24px auto 0;
+            @include mq(sm) {
+                margin: 10px auto 0;
+            }
         }
 
         &_btn {
             margin-top: 40px;
             text-align: center;
+            @include mq(sm) {
+                margin: 20px auto 0;
+            }
         }
     }
 }
@@ -855,29 +1022,54 @@ a {
     position: relative;
     width: 100%;
     height: 964px;
-    margin-top: 180px;
+
+    @include mq(sm) {
+        margin-top: 600px;
+        background: url(../images/WORKS.png)no-repeat;
+        background-size: 200px;
+        background-position: left;
+    }
 
     &__bg-title {
         position: absolute;
-        top: 0;
+        top: 300px;
         left: 0;
 
         img {
             width: 343.8px;
+
+            // @include mq(sm) {
+            //     width: 200px;
+            // }
         }
     }
 
     &__wrapper {
         position: relative;
         width: 1140px;
-        height: 525px;
+        height: 225px;
         margin: 0 auto;
+
+        @include mq(sm) {
+            // width: 80%;
+            width: 100%;
+            margin: 0 auto;
+        }
 
         &_text {
             position: absolute;
-            top: 60px;
-            right: 8px;
-            width: 950px;
+            @include mq(md) {
+                width: 950px;
+                top: 60px;
+                right: 8px;
+            }
+
+            @include mq(sm) {
+                top: 350px;
+                width: 300px;
+                left: 50%;
+                transform: translateX( -50% );
+            }
         }
 
         h3 {
@@ -890,20 +1082,69 @@ a {
             text-align: center;
             letter-spacing: 2px;
             margin: 0 0 0 auto;
+
+            @include mq(sm) {
+                font-size: 18px;
+                width: 300px;
+            }
         }
 
         p {
             font-size: 14px;
             font-weight: 500;
             margin-top: 40px;
+
+            @include mq(sm) {
+                width: 300px;
+                font-size: 13px;
+                margin: 20px auto;
+            }
         }
     }
 
+    &__items {
 
+
+        li {
+            &:not(:first-child) {
+                @include mq(sm) {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
     &__item {
+        @include mq(sm) {
+            width: 80%;
+            // margin: 70px auto;
+            // text-align: center;
+        }
+
+        &_title {
+            @include mq(sm) {
+                font-size: 14px;
+                text-align: center;
+                color: #192F60;
+            }
+        }
+
+        &_text {
+            @include mq(sm) {
+                font-size: 12px;
+                margin: 15px auto;
+                width: 80%;
+            }
+        }
+
         img {
-            width: 618px;
-            height: 412px;
+            @include mq(md) {
+                width: 618px;
+                height: 412px;
+            }
+
+            @include mq(sm) {
+                width: 250px;
+            }
         }
     }
 
@@ -913,20 +1154,27 @@ a {
         left: 50%;
         transform: translateX(-50%);
         width: 1630px;
+        // @include mq(sm) {
+        //     top: 540px;
+        // }
 
-        // margin: 0 auto;
         &_item {
             margin: -22px auto 0;
             width: 528px;
             height: 600px;
+            // @include mq(sm) {
+            //     width: 300px;
+            // }
 
-            // text-align: center;
             p {
                 font-size: 14px;
                 font-weight: 500;
                 color: #333333;
                 margin-top: 32px;
                 line-height: 1.8;
+                // @include mq(sm) {
+                //     font-size: 10px;
+                // }
             }
 
             a {
@@ -938,6 +1186,10 @@ a {
             font-size: 20px;
             color: #192F60;
             font-weight: 700;
+
+            @include mq(sm) {
+                font-size: 15px;
+            }
         }
 
         &_btn {
@@ -954,19 +1206,31 @@ a {
                 content: url(/assets/images/Icon\ awesome-caret-right\ 紺.svg);
                 padding-left: 15px;
             }
+            @include mq(sm) {
+                margin-top: 15px;
+                color: #192F60;
+            }
         }
     }
 
     &__others-btn {
-        position: absolute;
-        bottom: 19px;
+
         background: #AEB6C7;
         width: 240px;
         height: 40px;
-        left: 50%;
         padding: 8px 0;
         text-align: center;
-        transform: translateX(-50%);
+
+        @include mq(md) {
+            position: absolute;
+            bottom: 19px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+        @include mq(sm) {
+            margin: 10px auto;
+        }
 
         a {
             color: #FFFFFF;
@@ -981,27 +1245,48 @@ a {
 .blog {
     position: relative;
     width: 100%;
-    height: 515px;
     margin: 70px auto;
+@include mq(md) {
     background: url(../images/blog_bg.png)no-repeat center center / cover;
+    height: 515px;
+
+}
+    @include mq(sm) {
+        margin: 1000px auto 0;
+        height: 800px;
+    }
 
     &__bg-title {
         position: absolute;
         right: 113px;
+        @include mq(sm) {
+            right: 0;
+        }
 
         img {
             width: 335px;
+            @include mq(sm) {
+                width: 200px;
+            }
         }
     }
 
     &__wrapper {
         position: absolute;
         top: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 950px;
-        height: 408px;
         background: #FFFFFF;
+        @include mq(md) {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 950px;
+            height: 408px;
+
+        }
+        @include mq(sm) {
+            width: 80%;
+            left: 50%;
+            transform: translateX( -50% );
+        }
     }
 
     &__item {
@@ -1009,11 +1294,22 @@ a {
         width: 760px;
         height: 87px;
         border-bottom: 1px solid #CACACA;
+        @include mq(sm) {
+            width: 100%;
+            height: 150px;
+        }
 
         &_news {
-            display: flex;
-            justify-content: center;
+
             padding-top: 31px;
+            @include mq(md) {
+                display: flex;
+                justify-content: center;   
+            }
+            @include mq(sm) {
+                padding-top: 35px;
+            }
+
         }
 
         &_date {
@@ -1025,20 +1321,30 @@ a {
             font-size: 16px;
             font-weight: 300;
             color: #2D2D2D;
-            margin-left: 32px;
-            border-bottom: 1px solid #707070;
+            @include mq(md) {
+                border-bottom: 1px solid #707070;
+                margin-left: 32px;
+            }
+            @include mq(sm) {
+                margin-top: 15px;
+            }
         }
     }
 }
 
 .footer {
     width: 100%;
-    margin-top: 80px;
+    @include mq(md) {
+        margin-top: 80px;
+    }
 
     &__contact {
         background: url(../images/contact01.png)no-repeat center center / cover;
         width: 100%;
         height: 316px;
+        @include mq(sm) {
+            height: 350px;
+        }
 
         &_text {
             padding-top: 76px;
@@ -1047,13 +1353,22 @@ a {
             font-weight: 700;
             letter-spacing: 2px;
             color: #FFFFFF;
+            @include mq(sm) {
+                font-size: 18px;
+            }
         }
 
         &_wrapper {
-            width: 560px;
-            display: flex;
-            justify-content: space-between;
             margin: 34px auto 0;
+            width: 560px;
+            @include mq(md) {
+                display: flex;
+                justify-content: space-between;   
+            }
+            @include mq(sm) {
+                width: 100%;
+                text-align: center;
+            }
         }
 
         &_tell {
@@ -1061,6 +1376,10 @@ a {
             height: 56px;
             background: #192F60;
             color: #EFF1F4;
+            @include mq(sm) {
+                text-align: center;
+                margin: 0 auto;
+            }
 
             &_number {
                 text-align: center;
@@ -1090,6 +1409,9 @@ a {
                 font-weight: 500;
                 text-align: center;
                 padding: 11px 0;
+                @include mq(sm) {
+                    margin-top: 10px;
+                }
             }
 
             a:after {
@@ -1103,6 +1425,9 @@ a {
         width: 100%;
         height: 221px;
         background: #192F60;
+        @include mq(sm) {
+            height: 180px;
+        }
 
         &_logo {
             width: 124px;
@@ -1116,6 +1441,10 @@ a {
             font-weight: 300;
             text-align: center;
             margin-top: 18px;
+            @include mq(sm) {
+                font-size: 12px;
+                
+            }
         }
 
         &_small {
@@ -1124,6 +1453,9 @@ a {
             font-weight: 300;
             text-align: center;
             margin-top: 30px;
+            @include mq(sm) {
+                margin-top: 10px;
+            }
         }
 
     }
@@ -1145,6 +1477,10 @@ a {
     width: 618px;
     height: 412px;
     height: auto;
+
+    // @include mq(sm) {
+    //     width: 250px;
+    // }
 }
 
 .slider .slick-slide {
