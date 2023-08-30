@@ -55,6 +55,14 @@ a {
         color: #192F60;
         padding: 8px 0;
         font-size: 14px;
+        &:hover {
+            color: #fff;
+            background: #192F60;
+            &:after {
+                content: url(/assets/images/Icon\ awesome-caret-right.svg);
+                padding-left: 15px;
+            }
+        }
     }
 
     a:after {
@@ -115,6 +123,9 @@ a {
         &_ja {
             font-size: 16px;
             color: #192F60;
+            &:hover {
+                color: #777a82;
+            }
         }
 
         li {
@@ -163,11 +174,16 @@ a {
         }
 
         &_email {
-            width: 128px;
-            height: 80px;
-            background: #20868A;
-            color: #FFFFFF;
-            text-align: center;
+                width: 128px;
+                height: 80px;
+                background: #20868A;
+                color: #FFFFFF;
+                text-align: center;
+                &:hover {
+                    background: #196a6d;
+                    transition: 1s;
+                }
+
 
             img {
                 width: 30px;
@@ -351,6 +367,9 @@ a {
             width: 240px;
             height: 56px;
             background: #192F60;
+            &:hover {
+                background: #122144;
+            }
             @include mq(sm) {
                 margin: 0 auto;
                 padding: 0;
@@ -392,6 +411,9 @@ a {
                 font-weight: 500;
                 text-align: center;
                 padding: 14px 0;
+                &:hover {
+                    background: #145254;
+                }
 
                 @include mq(md) {
                     margin-left: 80px;
@@ -682,8 +704,7 @@ a {
             position: absolute;
             bottom: 54px;
             left: 50%;
-            transform: translateX(-50%
-            );
+            transform: translateX( -50% );
 
         @include mq(sm) {
             margin-top: 50px;
@@ -1054,6 +1075,7 @@ a {
             // width: 80%;
             width: 100%;
             margin: 0 auto;
+            height: 500px;
         }
 
         &_text {
@@ -1201,6 +1223,14 @@ a {
             text-align: center;
             padding: 8px 0;
             font-size: 14px;
+            &:hover {
+                background: #192F60;
+                color: #fff;
+                &:after {
+                    content: url(/assets/images/Icon\ awesome-caret-right.svg);
+                    padding-left: 15px;
+                }
+            }
 
             &::after {
                 content: url(/assets/images/Icon\ awesome-caret-right\ 紺.svg);
@@ -1220,6 +1250,9 @@ a {
         height: 40px;
         padding: 8px 0;
         text-align: center;
+        &:hover {
+         background: #5e626a;
+        }
 
         @include mq(md) {
             position: absolute;
@@ -1252,7 +1285,7 @@ a {
 
 }
     @include mq(sm) {
-        margin: 1000px auto 0;
+        margin: 1250px auto 0;
         height: 800px;
     }
 
@@ -1376,6 +1409,9 @@ a {
             height: 56px;
             background: #192F60;
             color: #EFF1F4;
+            &:hover {
+                background: #0d1831;
+            }
             @include mq(sm) {
                 text-align: center;
                 margin: 0 auto;
@@ -1409,6 +1445,9 @@ a {
                 font-weight: 500;
                 text-align: center;
                 padding: 11px 0;
+                &:hover {
+                    background: #15595c;
+                }
                 @include mq(sm) {
                     margin-top: 10px;
                 }
