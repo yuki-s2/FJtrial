@@ -1,4 +1,6 @@
-'use strict';
+// 'use strict';
+
+
 $(document).ready(function(){
 	if (window.matchMedia('(min-width: 768px)').matches) {
 
@@ -18,25 +20,7 @@ $('.slider').slick({
 }
 });
 
-// $(".slide-items").slick({
-//           arrows: true, // 前・次のボタンを表示する
-//       dots: false, // ドットナビゲーションを表示する
-//     //   appendDots: $('.dots-3'), // ドットナビゲーションの生成位置を変更
-//       speed: 1000, // スライドさせるスピード（ミリ秒）
-//       slidesToShow: 1, // 表示させるスライド数
-//       centerMode: true, // slidesToShowが奇数のとき、現在のスライドを中央に表示する
-//       variableWidth: true, // スライド幅の自動計算を無効化
-//     autoplay: true, // 自動再生
-//   });
-// $(function () {
-//     $('#js-slider-3').slick({
-//       arrows: true, // 前・次のボタンを表示する
-//       dots: false, // ドットナビゲーションを表示する
-//     //   appendDots: $('.dots-3'), // ドットナビゲーションの生成位置を変更
-//       speed: 1000, // スライドさせるスピード（ミリ秒）
-//       slidesToShow: 1, // 表示させるスライド数
-//       centerMode: true, // slidesToShowが奇数のとき、現在のスライドを中央に表示する
-//       variableWidth: true, // スライド幅の自動計算を無効化
-//       autoplay: true,
-//     });
-//   });
+
+$(document).ready(function() {
+    $('.drawer').drawer();
+  });
