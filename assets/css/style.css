@@ -34,6 +34,11 @@ a {
   text-align: center;
   color: #192F60;
   padding: 8px 0;
+  font-size: 14px;
+}
+.btn a:after {
+  content: url(/assets/images/Icon\ awesome-caret-right\ 紺.svg);
+  padding-left: 15px;
 }
 
 .header__container {
@@ -88,19 +93,25 @@ a {
 .header__contact_tell_number {
   font-size: 24px;
   line-height: 1;
+  font-family: Neue Haas Grotesk Text Pro;
 }
 .header__contact_tell_number img {
   width: 16px;
   height: 16px;
 }
+.header__contact_tell_number span {
+  padding-left: 4px;
+}
 .header__contact_tell_time {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   text-align: right;
-  margin: 3px 10px 0 0;
+  margin: 3px 12px 0 0;
+  letter-spacing: 0.4px;
 }
 .header__contact_tell_time span {
-  font-size: 16px;
+  font-size: 15px;
+  letter-spacing: -2px;
 }
 .header__contact_email {
   width: 128px;
@@ -112,6 +123,9 @@ a {
 .header__contact_email img {
   width: 30px;
   margin: 13px 0 3px;
+}
+.header__contact_email_text {
+  letter-spacing: -2px;
 }
 
 .eyecatch__container {
@@ -136,26 +150,30 @@ a {
   width: 913px;
   text-align: center;
   letter-spacing: 12px;
+  line-height: 1.45;
+  padding: 0 0 0 13px;
+  letter-spacing: 15px;
 }
 .eyecatch__title-wrap h2 {
   background: #FFFFFF;
   color: #192F60;
   font-size: 60px;
   font-weight: 700;
-  margin-top: 8px;
+  margin-top: 5px;
   width: 913px;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 .eyecatch__title-wrap p {
   color: #192F60;
   font-size: 18px;
   font-weight: 700;
   background: #FFFFFF;
-  margin-top: 24px;
+  margin-top: 23px;
   width: 347px;
-  line-height: 2.7;
+  line-height: 2.3;
   text-align: center;
+  letter-spacing: 2.2px;
 }
 .eyecatch__contact {
   margin-top: 84px;
@@ -171,17 +189,18 @@ a {
   font-size: 24px;
   text-align: center;
   line-height: 1.2;
-  margin-top: 4px;
+  margin-top: 7px;
 }
 .eyecatch__contact_tell_number img {
   width: 16px;
   height: 16px;
 }
 .eyecatch__contact_tell_time {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   text-align: right;
   margin-right: 32px;
+  letter-spacing: 0.5px;
 }
 .eyecatch__contact_mail a {
   background: #20868A;
@@ -193,7 +212,11 @@ a {
   margin-left: 80px;
   font-weight: 500;
   text-align: center;
-  padding: 12px 0;
+  padding: 14px 0;
+}
+.eyecatch__contact_mail a:after {
+  content: url(/assets/images/Icon\ awesome-caret-right.svg);
+  padding-left: 15px;
 }
 .eyecatch__news {
   position: absolute;
@@ -210,19 +233,22 @@ a {
   font-size: 22px;
   border-right: 1px solid #192F60;
   color: #192F60;
-  padding-right: 23px;
+  padding-right: 21px;
   margin-left: 41px;
+  line-height: 28px;
 }
 .eyecatch__news_wrap {
   display: flex;
   width: 660px;
   margin-left: 118px;
+  font-size: 15px;
 }
 .eyecatch__news_date {
   margin-right: 32px;
 }
 .eyecatch__news_text {
   color: #2D2D2D;
+  font-size: 16px;
 }
 
 /*スクロールダウン全体の場所*/
@@ -240,11 +266,11 @@ a {
   /*描画位置*/
   writing-mode: vertical-rl;
   position: absolute;
-  left: -8px;
-  top: -60px;
+  left: -13px;
+  top: -54px;
   /*テキストの形状*/
   color: #eee;
-  font-size: 10px;
+  font-size: 2px;
   letter-spacing: 0.3em;
 }
 
@@ -254,6 +280,7 @@ a {
   /*描画位置*/
   position: absolute;
   top: 0;
+  right: 6px;
   /*線の形状*/
   width: 1px;
   height: 30px;
@@ -322,6 +349,8 @@ a {
 .concept__upper_wrapper p {
   font-size: 14px;
   margin-top: 40px;
+  margin-top: 30px;
+  line-height: 1.8;
 }
 .concept__upper_bg-title {
   width: 343.8px;
@@ -335,9 +364,9 @@ a {
   font-size: 28px;
   color: #FFFFFF;
   background: #192F60;
-  line-height: 1.6;
-  letter-spacing: 2.5px;
   font-weight: 700;
+  line-height: 2;
+  letter-spacing: 2.9px;
 }
 .concept__upper_right_title-upper {
   margin-top: 40px;
@@ -348,16 +377,18 @@ a {
   margin: 12px 0 0 auto;
 }
 .concept__upper_right_price {
-  margin-top: 44px;
+  margin-top: 35px;
   font-size: 20px;
   color: #192F60;
+  padding-left: 30px;
+  letter-spacing: 2px;
 }
 .concept__upper_right_price span {
-  font-size: 60px;
+  font-size: 54px;
 }
 .concept__upper_btn {
   position: absolute;
-  bottom: 60px;
+  bottom: 54px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -377,19 +408,20 @@ a {
   width: 372px;
 }
 .concept__lower_left_subTitle {
-  margin: 80px 0 0 8px;
+  margin: 76px 0 0 8px;
   font-size: 20px;
   font-weight: 700;
   color: #192F60;
+  letter-spacing: 2px;
 }
 .concept__lower_left h3 {
-  margin-top: 16px;
+  margin-top: 12px;
   font-size: 28px;
   color: #FFFFFF;
   background: #192F60;
   width: 296px;
   font-weight: 700;
-  line-height: 2.3;
+  line-height: 1.8;
   text-align: center;
   letter-spacing: 2.4px;
 }
@@ -403,13 +435,14 @@ a {
   width: 757px;
 }
 .concept__lower_right_text {
-  margin-left: 19px;
-  width: 459px;
+  margin-left: 30px;
+  width: 447px;
 }
 .concept__lower_right_text h4 {
   font-size: 24px;
   font-weight: 700;
   color: #192F60;
+  letter-spacing: 4px;
 }
 .concept__lower_right_text p {
   margin-top: 2px;
@@ -428,7 +461,7 @@ a {
 .concept__lower_right_features2 {
   display: flex;
   justify-content: flex-end;
-  margin: 58px 81px 0 0;
+  margin: 58px 91px 0 0;
 }
 .concept__lower_right_features2 img {
   width: 100px;
@@ -437,7 +470,7 @@ a {
 .concept__lower_right_features3 {
   display: flex;
   justify-content: flex-end;
-  margin: 58px 162px 0 0;
+  margin: 58px 181px 0 0;
 }
 .concept__lower_right_features3 img {
   width: 100px;
@@ -457,16 +490,16 @@ a {
   background: #192F60;
   color: #FFFFFF;
   width: 443px;
-  line-height: 2.4;
-  letter-spacing: 2px;
+  line-height: 2;
+  letter-spacing: 3px;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 78px;
 }
 .service__container p {
   font-size: 14px;
   font-weight: 500;
   width: 950px;
-  margin-top: 40px;
+  margin-top: 39px;
 }
 .service__bg-title {
   width: 335px;
@@ -512,7 +545,8 @@ a {
   width: 275px;
   font-size: 14px;
   font-weight: 500;
-  margin: 32px auto 0;
+  line-height: 1.7;
+  margin: 24px auto 0;
 }
 .service__item_btn {
   margin-top: 40px;
@@ -544,8 +578,8 @@ a {
 }
 .work__wrapper_text {
   position: absolute;
-  top: 80px;
-  right: 0;
+  top: 60px;
+  right: 8px;
   width: 950px;
 }
 .work__wrapper h3 {
@@ -554,7 +588,7 @@ a {
   color: #FFFFFF;
   background: #192F60;
   width: 443px;
-  line-height: 2.4;
+  line-height: 2;
   text-align: center;
   letter-spacing: 2px;
   margin: 0 0 0 auto;
@@ -576,7 +610,7 @@ a {
   width: 1630px;
 }
 .work__slider_item {
-  margin: 0 auto;
+  margin: -22px auto 0;
   width: 528px;
   height: 600px;
 }
@@ -585,6 +619,7 @@ a {
   font-weight: 500;
   color: #333333;
   margin-top: 32px;
+  line-height: 1.8;
 }
 .work__slider_item a {
   color: #192F60;
@@ -605,7 +640,7 @@ a {
 }
 .work__others-btn {
   position: absolute;
-  bottom: 0;
+  bottom: 19px;
   background: #AEB6C7;
   width: 240px;
   height: 40px;
@@ -622,7 +657,7 @@ a {
   position: relative;
   width: 100%;
   height: 515px;
-  margin: 0 auto;
+  margin: 70px auto;
   background: url(../images/blog_bg.png) no-repeat center center/cover;
 }
 .blog__bg-title {
@@ -644,13 +679,13 @@ a {
 .blog__item {
   margin: 0 auto;
   width: 760px;
-  height: 92px;
+  height: 87px;
   border-bottom: 1px solid #CACACA;
 }
 .blog__item_news {
   display: flex;
   justify-content: center;
-  padding-top: 39px;
+  padding-top: 31px;
 }
 .blog__item_date {
   font-size: 16px;
@@ -674,17 +709,18 @@ a {
   height: 316px;
 }
 .footer__contact_text {
-  padding-top: 80px;
+  padding-top: 76px;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
+  letter-spacing: 2px;
   color: #FFFFFF;
 }
 .footer__contact_wrapper {
   width: 560px;
   display: flex;
   justify-content: space-between;
-  margin: 40px auto 0;
+  margin: 34px auto 0;
 }
 .footer__contact_tell {
   width: 240px;
@@ -701,7 +737,7 @@ a {
   height: 16px;
 }
 .footer__contact_tell_time {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   text-align: right;
   margin-right: 32px;
@@ -716,6 +752,10 @@ a {
   text-align: center;
   padding: 11px 0;
 }
+.footer__contact_mail a:after {
+  content: url(/assets/images/Icon\ awesome-caret-right.svg);
+  padding-left: 15px;
+}
 .footer__lower {
   width: 100%;
   height: 221px;
@@ -728,7 +768,7 @@ a {
 }
 .footer__lower_address {
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   text-align: center;
   margin-top: 18px;
@@ -784,11 +824,12 @@ a {
   border-radius: 50%;
   height: 64px;
   width: 64px;
+  z-index: 100;
 }
 
 .slick-prev {
   position: absolute;
-  right: 254px;
+  right: 386px;
   left: auto;
 }
 
@@ -807,6 +848,6 @@ a {
 }
 
 .slick-next {
-  right: 120px;
+  right: 282px;
 }
 /*# sourceMappingURL=style.css.map */
