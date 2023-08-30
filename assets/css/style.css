@@ -467,47 +467,36 @@ a {
   }
 }
 
-/*スクロールダウン全体の場所*/
 .scrolldown1 {
-  /*描画位置※位置は適宜調整してください*/
   position: absolute;
   right: 32px;
   bottom: 62px;
-  /*全体の高さ*/
   height: 50px;
 }
 
-/*Scrollテキストの描写*/
 .scrolldown1 span {
-  /*描画位置*/
   writing-mode: vertical-rl;
   position: absolute;
   left: -13px;
   top: -54px;
-  /*テキストの形状*/
   color: #eee;
   font-size: 2px;
   letter-spacing: 0.3em;
 }
 
-/* 線の描写 */
 .scrolldown1::after {
   content: "";
-  /*描画位置*/
   position: absolute;
   top: 0;
   right: 6px;
-  /*線の形状*/
   width: 1px;
   height: 30px;
   background: #eee;
-  /*線の動き1.4秒かけて動く。永遠にループ*/
   -webkit-animation: pathmove 1.4s ease-in-out infinite;
           animation: pathmove 1.4s ease-in-out infinite;
   opacity: 0;
 }
 
-/*高さ・位置・透過が変化して線が上から下に動く*/
 @-webkit-keyframes pathmove {
   0% {
     height: 0;
@@ -524,6 +513,7 @@ a {
     opacity: 0;
   }
 }
+
 @keyframes pathmove {
   0% {
     height: 0;
