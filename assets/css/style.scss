@@ -100,12 +100,9 @@ a {
         left: 0;
         z-index: 50;
         background: #FFFFFF;
+        width: 100%;
 
-        @include mq(md) {
-            width: 100%;
-        }
-
-        @media only screen and (max-width: 830px) {
+        @media only screen and (max-width: 1200px) {
             padding: 0 40px;
         }
 
@@ -118,6 +115,10 @@ a {
         display: flex;
         height: 80px;
         align-items: center;
+
+        @include mq(sm) {
+            display: none;
+        }
     }
 
     &__logo {
@@ -180,7 +181,7 @@ a {
         align-items: center;
         height: 80px;
 
-        @media only screen and (max-width: 830px) {
+        @media only screen and (max-width: 1200px) {
             display: none;
         }
 
@@ -963,6 +964,7 @@ a {
             width: 1140px;
             height: 880px;
         }
+
         @media only screen and (max-width: 1200px) {
             height: 1700px;
             width: 100%;
@@ -1036,16 +1038,17 @@ a {
         background: #FFFFFF;
         position: relative;
         width: 308px;
-        @media only screen and (min-width: 1201px) {
-        &:not(:first-child) {
-         margin-left: 13px;
 
-       }
-    }
+        @media only screen and (min-width: 1201px) {
+            &:not(:first-child) {
+                margin-left: 13px;
+
+            }
+        }
 
         @media only screen and (max-width: 1200px) {
             width: 300px;
-            margin: 50px auto;        
+            margin: 50px auto;
         }
 
 
@@ -1132,6 +1135,7 @@ a {
         width: 1140px;
         height: 225px;
         margin: 0 auto;
+
         @media only screen and (max-width: 1200px) {
             width: 80%;
         }
@@ -1150,6 +1154,7 @@ a {
                 top: 60px;
                 right: 8px;
             }
+
             @media only screen and (max-width: 1200px) {
                 width: 100%;
             }
@@ -1348,13 +1353,18 @@ a {
         height: 515px;
 
     }
+
     @media only screen and (max-width: 800px) {
         margin: 150px auto 0;
     }
 
     @include mq(sm) {
-        margin: 1250px auto 0;
+        margin: 1750px auto 0;
         height: 800px;
+    }
+
+    @media only screen and (max-width: 515px) {
+        margin: 1350px auto 0;
     }
 
     &__bg-title {
@@ -1642,14 +1652,20 @@ a {
     height: 64px;
     width: 64px;
     z-index: 99;
+
+    @media only screen and (max-width: 1200px) {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .slick-prev {
     position: absolute;
     right: 386px;
     left: auto;
+
     @media only screen and (max-width: 1200px) {
-        right: 450px;
+        right: 508px;
     }
 }
 
@@ -1659,6 +1675,11 @@ a {
     top: 20px;
     left: 21px;
     z-index: 100;
+
+    @media only screen and (max-width: 1200px) {
+        top: 7px;
+        left: 11px;
+    }
 }
 
 .slick-prev::before {
@@ -1668,13 +1689,18 @@ a {
     left: 21px;
     z-index: 100;
 
+    @media only screen and (max-width: 1200px) {
+        top: 7px;
+        left: 11px;
+    }
 }
 
 
 .slick-next {
     right: 282px;
+
     @media only screen and (max-width: 1200px) {
-        right: 350px;
+        right: 450px;
     }
 }
 

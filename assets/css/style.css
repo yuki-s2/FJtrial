@@ -90,13 +90,9 @@ a {
   left: 0;
   z-index: 50;
   background: #FFFFFF;
+  width: 100%;
 }
-@media screen and (min-width: 768px) {
-  .header__container {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 1200px) {
   .header__container {
     padding: 0 40px;
   }
@@ -110,6 +106,11 @@ a {
   display: flex;
   height: 80px;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header__wrapper {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) {
   .header__logo {
@@ -169,7 +170,7 @@ a {
   align-items: center;
   height: 80px;
 }
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 1200px) {
   .header__contact {
     display: none;
   }
@@ -1294,8 +1295,13 @@ a {
 }
 @media screen and (max-width: 767px) {
   .blog {
-    margin: 1250px auto 0;
+    margin: 1750px auto 0;
     height: 800px;
+  }
+}
+@media only screen and (max-width: 515px) {
+  .blog {
+    margin: 1350px auto 0;
   }
 }
 .blog__bg-title {
@@ -1569,6 +1575,13 @@ a {
   width: 64px;
   z-index: 99;
 }
+@media only screen and (max-width: 1200px) {
+  .slick-prev,
+.slick-next {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 .slick-prev {
   position: absolute;
@@ -1577,7 +1590,7 @@ a {
 }
 @media only screen and (max-width: 1200px) {
   .slick-prev {
-    right: 450px;
+    right: 508px;
   }
 }
 
@@ -1588,6 +1601,12 @@ a {
   left: 21px;
   z-index: 100;
 }
+@media only screen and (max-width: 1200px) {
+  .slick-next::before {
+    top: 7px;
+    left: 11px;
+  }
+}
 
 .slick-prev::before {
   content: url(/assets/images/Icon\ ionic-ios-arrow-round-forward左.svg);
@@ -1596,13 +1615,19 @@ a {
   left: 21px;
   z-index: 100;
 }
+@media only screen and (max-width: 1200px) {
+  .slick-prev::before {
+    top: 7px;
+    left: 11px;
+  }
+}
 
 .slick-next {
   right: 282px;
 }
 @media only screen and (max-width: 1200px) {
   .slick-next {
-    right: 350px;
+    right: 450px;
   }
 }
 
